@@ -1,0 +1,73 @@
+@import "../../var.css";
+
+.container{
+    overflow: hidden;
+    width: 100vw;
+    max-width: 65rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
+    color: var(--color-text);
+}
+
+.title{
+    font-size: 3rem;
+    font-weight: 600;
+    padding-top: 5rem;
+    margin-bottom: 1.5rem;
+}
+
+.description{
+    font-weight: 400;
+    font-weight: 1rem;
+    max-width: 51rem;
+    padding: 0 2rem;
+}
+
+.bars{
+    margin: 1.5rem;
+    width: 100vw;
+    max-width: 80%;
+    text-align: left;
+}
+
+.bar{
+    display: flex;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+    border-radius: 0.5rem;
+    background: var(--color-dark);
+}
+
+.barImg{
+    object-fit: cover;
+    height: 3rem;
+    width: 3rem;
+    margin-right: 2rem;
+}
+
+.barText>p{
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+@media screen and (max-width:720px){
+    .barText>p{
+        font-size: 2vw;
+    }
+}
+@media screen and (max-width:480px){
+    .barText>p{
+        font-size: 2vw;
+    }
+    .barImg{
+        height: 2.25rem;
+        width: 2.25rem;
+    }
+    .barText>h2{
+        font-size: 5vw;
+    }
+}

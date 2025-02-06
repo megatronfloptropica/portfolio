@@ -1,0 +1,148 @@
+@import "../../var.css";
+
+.container {
+    color: var(--color-text);
+    margin: 80px auto;
+    padding: 20px;
+    max-width: 1200px;
+    text-align: center;
+    animation: movedown 2s linear forwards ;
+    opacity: 0;
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition */
+}
+@keyframes movedown {
+    0%{
+        opacity: 1;
+        transform: translateY(-30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+/* .container:nth-child(1){
+    animation-delay: 0s;
+}
+.container:nth-child(2){
+    animation-delay: 1s;
+} */
+
+.header {
+    margin-bottom: 40px;
+    padding-top: 5rem;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--color-secondary);
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: var(--color--text);
+}
+
+.timeline {
+    position: relative;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.timeline::after { /*line*/
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: moveline 3s linear forwards;
+}
+
+@keyframes moveline {
+    0%{
+        height: 0;
+    }100%{
+        height: 100%
+    }
+    
+}
+
+.timelineItem {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.left {
+    flex-direction: row-reverse;
+}
+
+.right {
+    flex-direction: row;
+}
+
+.textbox {
+    background: #000;
+    color: white;
+    padding: 20px;
+    border-radius: 6px;
+    width: 45%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.textbox:nth-child(1){
+    animation-delay: 0s;
+}
+.textbox:nth-child(2){
+    animation-delay: 1s;
+}
+
+.timelineItem::before { /*dot*/
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.left .textbox {
+    text-align: right;
+}
+
+.right .textbox {
+    text-align: left;
+}
+
+
+
+@media screen  and (max-width:600px) {
+
+    
+    .timeline::after{
+        display: none;
+    }
+    .timelineItem::before {
+        display: none;
+    }
+    .textbox {
+        width: 80%;
+        text-align: left !important;
+        
+    }
+    .timelineItem {
+        flex-direction: column !important;
+        align-items: flex;
+    }
+}

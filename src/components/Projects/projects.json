@@ -1,0 +1,26 @@
+[
+    {
+        "ImgName":"kNN.png",
+      "title": "Classification Model",
+      "imageSrc": "/assets/projects/kNN.png",
+      "description": "Using Python to create classification models from a data set and evaluate the accuracy of the model using a confusion matrix.",
+      "skills": ["Python"],
+      "more": "https://github.com/megatronfloptropica/knn_MBA_Model_Training"  
+    },
+    {
+      "ImgName":"dataVisual.png",
+      "title": "Data Visualization",
+      "imageSrc": "projects/dataVisual.png",
+      "description": "Create dashboards of data using Power BI. The data sets are from Kaggle and Wide World Importers data warehouse, and using SQL to Query data.",
+      "skills": ["PowerBI","SQL"],
+      "more": ""
+    },
+    {
+      "ImgName":"uidesign.png",
+      "title": "UI Design",
+      "imageSrc": "projects/uidesign.png",
+      "description": "Design a prototype of the application for the club's public relations with specific requirements. The application's workflow is designed using a Data Flow Diagram (DFD) and using Figma for UX/UI design.",
+      "skills": ["Figma"],
+      "more": "https://www.figma.com/design/jMo2yAiw7yI1JWKTHdlBBa/System-anal?node-id=0-1&t=5zUk93LOkVl8oaNC-1"
+    }
+  ]

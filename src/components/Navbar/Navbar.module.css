@@ -1,0 +1,117 @@
+@import "../../var.css";
+
+/* .navbar{
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 61px;
+    z-index: 2;
+    margin: 0 10%;
+    
+    top: 0;
+    z-index: 3;
+} */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10%;
+    background: #0b2447;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visibility */
+    z-index: 1000; /* Keep navbar above other elements */
+}
+/* .navbar ul{
+    list-style: none;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1em 0;
+} */
+.navbar li a::after{
+    content: '';
+    /* position: fixed; */
+    display: block;
+    height: 0.4rem;
+    width: 0%;
+    background-color: var(--color-outline);
+    bottom: -1em;
+    transition: all ease-in-out 250ms;
+}
+.navbar li a:hover::after{
+    width: 100%;
+}
+.navbar li a:hover{
+    color: var(--color-outline);
+}
+
+
+.title{
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-text); /*can rename to change the color later @var.css*/
+}
+
+.menuBtn{
+    display : none;
+}
+.menu{
+    display: flex;
+}
+
+.menuItems{
+    display:flex;
+    gap: 47px;
+    list-style: none;
+}
+
+.menuItems a {
+    font-size: 25px;
+    color:var(--color-text);
+    text-decoration: none;
+}
+
+@media screen and (max-width:830px) {
+    .navbar {
+        flex-direction:column;
+        align-items: flex-start;
+    }    
+    .menu{
+        position: absolute;
+        right:0;
+        margin-right:10%;
+        flex-direction: column;
+        align-items: flex-end;
+        gap:11px;
+        z-index: 3;
+    }
+
+    .menuBtn {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menuItems{
+        display:none; 
+        flex-direction: column;
+        align-items: center;
+        gap: 13px;
+        border-radius: 10px;
+        background: rgb(2555.109);
+        /* background: linear-gradient(0deg,rgba(25,55,109,0.2)0%,rgba(25,55,109,1)10%); */
+        background: var(--color-secondary);
+        padding: 24px 33px;
+        box-shadow:0 0 4px 0rgba(0,0,0,0.25);
+    }
+
+    .menuOpen{
+        display: flex;
+        z-index: 1;
+    }
+}

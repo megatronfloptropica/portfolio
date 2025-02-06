@@ -1,0 +1,26 @@
+[
+    {
+      "title": "Classification Model",
+      "imageSrc": "projects/kNN.png",
+      "description": "This is my first classification model training project.",
+      "skills": ["Python"],
+      "code": "https://github.com/megatronfloptropica/knn_MBA_Model_Training",
+      "more details": "https://www.github.com"
+    },
+    {
+      "title": "Project B",
+      "imageSrc": "projects/project.png",
+      "description": "This is a project made to learn the latest languages by building an app.",
+      "skills": ["React", "Express", "Node", "Sass"],
+      "demo": "https://www.example.com",
+      "source": "https://www.github.com"
+    },
+    {
+      "title": "Project C",
+      "imageSrc": "projects/project.png",
+      "description": "This is a project made to learn the latest languages by building an app.",
+      "skills": ["React", "Express", "Node"],
+      "demo": "https://www.example.com",
+      "source": "https://www.github.com"
+    }
+  ]
