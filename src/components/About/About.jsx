@@ -2,6 +2,15 @@ import React from "react";
 import styles from "./About.module.css";
 
  export const About =()=>{
+    const handleDownloadResume = () => {
+        // Create a temporary anchor element to trigger the download
+        const link = document.createElement("a");
+        link.href = "/assets/about/Natthamon_resume.pdf"; // Path to your resume file
+        link.download = "Natthamon_resume.pdf"; // Default filename for the downloaded file
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      };
     return (
         <section id="about" className={styles.container}  >
             <span className={styles.title}>Who am I ?</span>
@@ -31,7 +40,7 @@ import styles from "./About.module.css";
                     </div>
                 </div>
             </div>
-            
+            <button className={styles.resumeButton} onClick={handleDownloadResume}> Download Resume</button>
         </section>
     );
  };

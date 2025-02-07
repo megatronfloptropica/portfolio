@@ -1,11 +1,24 @@
 import React from "react";
 import styles from "./ProjectCard.module.css";
 
-// import { getImageUrl } from "../../utils";
-
 export const ProjectCard = ({
-  project: { ImgName,title, imageSrc, description, skills, code, more },
+  project: { ImgName, title, imageSrc, description, skills, code, more, downloadLink },
 }) => {
+  const handleMoreDetailClick = () => {
+    if (title === "Data Visualization" && downloadLink) {
+      // Trigger the download
+      const link = document.createElement("a");
+      link.href = downloadLink;
+      link.download = "dataVisaulize.zip"; // Specify the default filename for the download
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    } else if (more) {
+      // Redirect to the more details page
+      window.open(more, "_blank");
+    }
+  };
+
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>{title}</h3>
@@ -14,7 +27,6 @@ export const ProjectCard = ({
         alt={`Image of ${title}`}
         className={styles.image}
       />
-      
       <p className={styles.description}>{description}</p>
       <ul className={styles.skills}>
         {skills.map((skill, id) => {
@@ -26,12 +38,13 @@ export const ProjectCard = ({
         })}
       </ul>
       <div className={styles.links}>
-        <a href={more} className={styles.link}>
-          more detial
+        <a
+          href={more || "#"}
+          className={styles.link}
+          onClick={handleMoreDetailClick}
+        >
+          more detail
         </a>
-        {/* <a href={more} className={styles.link}>
-          Source
-        </a> */}
       </div>
     </div>
   );

@@ -53,6 +53,20 @@
     font-size: 0.9rem;
     font-weight: 200;
 }
+.resumeButton {
+    background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  border-radius: 50px;
+  }
+  
+  .resumeButton:hover {
+    background-color: var(--color-secondary);
+  }
 
 @media screen and (max-width:720px){
     .barText>p{

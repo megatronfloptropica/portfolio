@@ -13,7 +13,8 @@
       "imageSrc": "projects/dataVisual.png",
       "description": "Create dashboards of data using Power BI. The data sets are from Kaggle and Wide World Importers data warehouse, and using SQL to Query data.",
       "skills": ["PowerBI","SQL"],
-      "more": ""
+      "more": "",
+      "downloadLink": "/assets/projects/dataVisaulize.zip"
     },
     {
       "ImgName":"uidesign.png",
